@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư chúc mừng 20/10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 36px;
+        }
+
+        button {
+            background-color: #d63384;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        button:hover {
+            background-color: #b52d6b;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2b8a3e;
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chúc mừng Ngày Phụ nữ Việt Nam 20/10</h1>
+        <button onclick="sendGreeting()">Xem thư chúc mừng</button>
+        <p id="result"><span id="text"></span></p>
+    </div>
+
+    <script>
+        function sendGreeting() {
+            const text = `Thân gửi các bạn sinh viên nữ thân mến,\n
+
+Nhân dịp Ngày Phụ nữ Việt Nam 20/10, mình xin gửi đến tất cả các bạn lời chúc mừng chân thành nhất. Các bạn không chỉ là những người phụ nữ trẻ trung, đầy nhiệt huyết mà còn là những người đang từng ngày xây dựng tương lai của mình bằng nỗ lực và đam mê.\n
+
+Là sinh viên, mình hiểu rằng con đường học tập và trưởng thành không phải lúc nào cũng dễ dàng. Nhưng sự kiên trì, thông minh và sự sáng tạo của các bạn chính là động lực để các bạn vượt qua mọi thử thách và đạt được những thành công mà các bạn hằng mong muốn.\n
+
+Chúc các bạn luôn tự tin vào bản thân, duy trì được sự cân bằng giữa việc học tập và cuộc sống, đồng thời không ngừng phấn đấu để trở thành những người phụ nữ tài giỏi và mạnh mẽ. Mong rằng những ước mơ của các bạn sẽ sớm trở thành hiện thực, và mọi ngày trên giảng đường đều mang lại những kỷ niệm đáng nhớ.\n
+
+Hãy nhớ rằng, dù ở bất kỳ đâu hay trong hoàn cảnh nào, các bạn đều rất tuyệt vời và xứng đáng với những điều tốt đẹp nhất.\n
+
+Chúc các bạn một Ngày Phụ nữ Việt Nam tràn đầy niềm vui, hạnh phúc và thật nhiều năng lượng để tiếp tục hành trình của mình!\n
+
+Chúc mừng ngày 20/10!\n
+
+Thân mến,
+[DannyK]`;
+            
+            let index = 0;
+            const speed = 50; 
+            const textElement = document.getElementById("text");
+            textElement.innerHTML = "";
+            function typeWriter() {
+                if (index < text.length) {
+                    textElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        }
+    </script>
+</body>
+</html>
